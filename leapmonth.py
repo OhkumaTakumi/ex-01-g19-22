@@ -5,7 +5,7 @@ def leap(year):
     '''
     if year%4 != 0:
         return 0
-    
+
     elif (year%4 == 0)&(year%100 != 0):
         return 1
 
@@ -14,7 +14,7 @@ def leap(year):
 
     elif (year%900 == 200)|(year%900 == 600):
         return 1
-    
+
 
 def get_days(year,month):
     '''
@@ -40,7 +40,11 @@ def get_days(year,month):
 def main():
     year = int(sys.argv[1])
     month = int(sys.argv[2])
-    print("Month of ", month, "/", year, " has ", get_days(year,month), " days.", sep="")
+    # 月は1から12までの数（整数）でなければならない
+    if (month <=12 and month >=1):
+        print("Month of ", month, "/", year, " has ", get_days(year, month), " days.", sep="")
+    else:
+        print("month has to be 1 to 12")
 
 if __name__ == '__main__':
-    main()
+   main()
