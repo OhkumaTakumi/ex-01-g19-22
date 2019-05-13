@@ -41,10 +41,13 @@ def main():
     year = int(sys.argv[1])
     month = int(sys.argv[2])
     # 月は1から12までの数（整数）でなければならない
-    if (month <=12 and month >=1):
+    #　（扱いが面倒なので）紀元前は対象外とする
+    if (month <=12 and month >=1 and year > 0):
         print("Month of ", month, "/", year, " has ", get_days(year, month), " days.", sep="")
+    elif year <= 0:
+        print("year has to be positive number.")
     else:
-        print("month has to be 1 to 12")
+        print("month has to be 1 to 12.")
 
 if __name__ == '__main__':
    main()
