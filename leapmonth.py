@@ -44,9 +44,9 @@ def main():
     #　（扱いが面倒なので）紀元前は対象外とする
     if (month <=12 and month >=1 and year > 0):
         print("Month of ", month, "/", year, " has ", get_days(year, month), " days.", sep="")
-    elif year <= 0:
+    if year <= 0:
         print("year has to be positive number.")
-    else:
+    if (month <= 0 or month >= 13):
         print("month has to be 1 to 12.")
 
 if __name__ == '__main__':
