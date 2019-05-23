@@ -11,3 +11,5 @@ $
 - The assignments will be given as issues on your repository, hopefully. 
 - Read and resolve the created issues.
 - Don't import additional Libraries/Packages other than `sys`.
+
+[![Build Status](https://travis-ci.com/OhkumaTakumi/ex-01-g19-22.svg?branch=master)](https://travis-ci.com/OhkumaTakumi/ex-01-g19-22)
